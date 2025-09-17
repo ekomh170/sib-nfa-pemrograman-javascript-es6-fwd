@@ -24,7 +24,7 @@ Repository ini berisi kumpulan tugas-tugas yang dikerjakan selama mengikuti prog
 ### 🎯 Tugas 1: Pemrograman JavaScript ES6 - Menghitung Luas Bangun Datar
 - **Branch**: `tugas1-javascript-eko`
 - **GitHub Link**: [https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas1-javascript-eko](https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas1-javascript-eko)
-- **Status**: ⏳ BELUM SUBMIT
+- **Status**: ✅ SUDAH SUBMIT
 - **Deadline**: 19 September 2025, 23:59
 - **Teknologi**: HTML5, JavaScript ES6
 - **Deskripsi**: Menghitung luas persegi panjang, bujur sangkar, dan segitiga menggunakan variabel dan operator. Kode ditulis dalam 1 file HTML, parameter bebas, dan setiap fungsi diberi komentar penjelasan. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
