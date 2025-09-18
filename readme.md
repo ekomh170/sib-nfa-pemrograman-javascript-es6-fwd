@@ -10,16 +10,16 @@
 - **Prodi & Peminatan**: Teknik Informatika - Software Engineering
 - **Semester**: 5
 
-### 🎯 Tugas 1: Pemrograman JavaScript ES6 - Menghitung Luas Bangun Datar
+### 🎯 Tugas 2: Pemrograman JavaScript ES6 - Data Pegawai & Gaji
 
 **Identitas Tugas:**
 - **Nama**: Eko Muchamad Haryono
 - **NIM**: 0110223079
 - **Topik**: Pemrograman JavaScript ES6
 - **Group**: 2
-- **Deadline**: Jumat, 19 September 2025, 23:59
+- **Deadline**: Sabtu, 20 September 2025, 23:59
 
-**Deskripsi**: Menghitung luas persegi panjang, bujur sangkar, dan segitiga menggunakan variabel dan operator. Kode ditulis dalam 1 file HTML, parameter bebas, dan setiap langkah diberi komentar penjelasan. File berisi identitas mahasiswa di bagian atas, diikuti soal dan solusi perhitungan sesuai format tugas. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
+**Deskripsi**: Cetak data pegawai (nama: dodi prayodi, umur: 25 tahun, jabatan: manajer, status: menikah) dalam bentuk tabel HTML. Judul kolom menggunakan thead, isi data menggunakan tbody. Hitung gaji pokok sesuai jabatan (manajer: 15jt, asisten manajer: 10jt, staff: 5jt), tunjangan jabatan 15% dari gapok, BPJS 10% dari gapok, tunjangan keluarga 20% dari gapok jika menikah (pakai ternary), dan total gaji dijumlahkan di tfoot. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
 
 ---
 *Repository dibuat untuk program SIB Fullstack Web Developer (NFA) - Batch 2025*
