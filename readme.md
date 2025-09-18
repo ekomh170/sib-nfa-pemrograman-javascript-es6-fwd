@@ -19,7 +19,6 @@ Repository ini berisi kumpulan tugas-tugas yang dikerjakan selama mengikuti prog
 - Portfolio project selama program
 - Referensi untuk pembelajaran berkelanjutan
 
-## Link PerTugas
 
 ### 🎯 Tugas 1: Pemrograman JavaScript ES6 - Menghitung Luas Bangun Datar
 - **Branch**: `tugas1-javascript-eko`
@@ -28,6 +27,14 @@ Repository ini berisi kumpulan tugas-tugas yang dikerjakan selama mengikuti prog
 - **Deadline**: 19 September 2025, 23:59
 - **Teknologi**: HTML5, JavaScript ES6
 - **Deskripsi**: Menghitung luas persegi panjang, bujur sangkar, dan segitiga menggunakan variabel dan operator. Kode ditulis dalam 1 file HTML, parameter bebas, dan setiap fungsi diberi komentar penjelasan. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
+
+### 🎯 Tugas 2: Pemrograman JavaScript ES6 - Data Pegawai & Gaji
+- **Branch**: `tugas2-javascript-eko`
+- **GitHub Link**: [https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas2-javascript-eko](https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas2-javascript-eko)
+- **Status**: ✅ SUDAH SUBMIT
+- **Deadline**: 20 September 2025, 23:59
+- **Teknologi**: HTML5, JavaScript ES6
+- **Deskripsi**: Cetak data pegawai (nama: dodi prayodi, umur: 25 tahun, jabatan: manajer, status: menikah) dalam bentuk tabel HTML. Judul kolom menggunakan thead, isi data menggunakan tbody. Hitung gaji pokok sesuai jabatan (manajer: 15jt, asisten manajer: 10jt, staff: 5jt), tunjangan jabatan 15% dari gapok, BPJS 10% dari gapok, tunjangan keluarga 20% dari gapok jika menikah (pakai ternary), dan total gaji dijumlahkan di tfoot. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
 
 ---
 *Repository dibuat untuk program SIB Fullstack Web Developer (NFA) - Batch 2025*
