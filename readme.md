@@ -10,16 +10,16 @@
 - **Prodi & Peminatan**: Teknik Informatika - Software Engineering
 - **Semester**: 5
 
-### 🎯 Tugas 3: Pemrograman JavaScript ES6 - Sistem Manajemen Pesanan Toko Online
+### 🎯 Tugas 4: Pemrograman JavaScript ES6 - Sistem Manajemen Transportasi
 
 **Identitas Tugas:**
 - **Nama**: Eko Muchamad Haryono
 - **NIM**: 0110223079
 - **Topik**: Pemrograman JavaScript ES6
 - **Group**: 2
-- **Deadline**: Senin, 22 September 2025, 23:59
+- **Deadline**: Rabu, 24 September 2025, 23:59
 
-**Deskripsi**: Membuat sistem manajemen pesanan untuk toko online menggunakan fungsi dan array. Terdapat array produkToko yang menyimpan daftar produk (id, nama, harga, stok). Toko dapat menambah produk baru (fungsi tambahProduk), menghapus produk berdasarkan id (fungsi hapusProduk), dan menampilkan daftar produk (fungsi tampilkanProduk). File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
+**Deskripsi**: Membuat Sistem Manajemen Transportasi menggunakan konsep Object-Oriented Programming (OOP) dalam JavaScript. Sistem mencakup berbagai jenis kendaraan dengan perilaku dan karakteristik berbeda. Perusahaan mencatat data pelanggan yang menyewa kendaraan (nama, nomor telepon, kendaraan yang disewa). Buat class Pelanggan dengan properti nama, nomorTelepon, dan kendaraanDisewa. Tambahkan metode untuk mencatat transaksi penyewaan kendaraan dan sistem yang menampilkan daftar pelanggan yang sedang menyewa. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat. 
 
 ---
 *Repository dibuat untuk program SIB Fullstack Web Developer (NFA) - Batch 2025*
