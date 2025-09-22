@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Pertemuan 4 - Sistem Manajemen Transportasi</title>
+  <style>
+    /* Body dan font utama */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Container utama */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Kotak identitas mahasiswa */
+    .identitas {
+      background: linear-gradient(45deg, #0ea5e9, #3b82f6);
+      color: white;
+      padding: 25px;
+      margin: 0;
+    }
+
+    .identitas h3 {
+      margin: 0 0 15px 0;
+      font-size: 24px;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .identitas p {
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Konten utama */
+    .content {
+      padding: 30px;
+    }
+
+    /* Judul utama */
+    h3 {
+      color: #1f2937;
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 15px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border-left: 5px solid #0ea5e9;
+    }
+
+    /* Divider */
+    hr {
+      display: none;
+    }
+
+    /* Output section */
+    .output-section {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 2px solid #e2e8f0;
+    }
+
+    .output-section h4 {
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .console-note {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 4px solid #f59e0b;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .identitas {
+        padding: 20px;
+      }
+      
+      .content {
+        padding: 20px;
+      }
+      
+      .identitas h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Identitas Mahasiswa -->
+    <div class="identitas">
+      <h3>Identitas Mahasiswa</h3>
+      <p><b>NIM:</b> 0110223079</p>
+      <p><b>Nama:</b> Eko Muchamad Haryono</p>
+      <p><b>Aktivitas:</b> SIB Fullstack Web Developer (NFA)</p>
+      <p><b>Topik:</b> Pemrograman JavaScript ES6</p>
+      <p><b>Group:</b> 2</p>
+      <p><b>Ruangan:</b> Zoom Mentoring Kelompok 02 Fullstack Web Developer - Gedung NF Academy Training Center</p>
+      <p><b>Prodi & Peminatan:</b> Teknik Informatika - Software Engineering</p>
+      <p><b>Semester:</b> 5</p>
+    </div>
+
+    <div class="content">
+      <h3>🚗 Sistem Manajemen Transportasi</h3>
+      
+      <div class="output-section">
+        <h4>📋 Output Sistem</h4>
+        <div class="console-note">
+          💡 Buka Developer Tools (F12) dan lihat tab Console untuk melihat hasil eksekusi program OOP JavaScript.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Superclass: Kendaraan
+    class Kendaraan {
+      constructor(merk, model) {
+        this.merk = merk;
+        this.model = model;
+      }
+
+      getInfo() {
+        return `${this.merk} ${this.model}`;
+      }
+    }
+
+    // Subclass: Mobil
+    class Mobil extends Kendaraan {
+      constructor(merk, model, pintu) {
+        super(merk, model);
+        this.pintu = pintu;
+      }
+
+      getInfo() {
+        return `${super.getInfo()} - Pintu: ${this.pintu}`;
+      }
+    }
+
+    // Subclass: Motor
+    class Motor extends Kendaraan {
+      constructor(merk, model, tipe) {
+        super(merk, model);
+        this.tipe = tipe;
+      }
+
+      getInfo() {
+        return `${super.getInfo()} - Tipe: ${this.tipe}`;
+      }
+    }
+
+    // Class Pelanggan
+    class Pelanggan {
+      constructor(nama, nomorTelepon) {
+        this.nama = nama;
+        this.nomorTelepon = nomorTelepon;
+        this.kendaraanDisewa = null;
+      }
+
+      sewaKendaraan(kendaraan) {
+        this.kendaraanDisewa = kendaraan;
+        console.log(`${this.nama} menyewa ${kendaraan.getInfo()}`);
+      }
+
+      getInfoPelanggan() {
+        return `${this.nama} (${this.nomorTelepon}) -> ${this.kendaraanDisewa ? this.kendaraanDisewa.getInfo() : "Belum sewa kendaraan"}`;
+      }
+    }
+
+    // Sistem Manajemen Transportasi
+    class SistemTransportasi {
+      constructor() {
+        this.daftarPelanggan = [];
+      }
+
+      tambahPelanggan(pelanggan) {
+        this.daftarPelanggan.push(pelanggan);
+      }
+
+      tampilkanPelanggan() {
+        console.log("=== Daftar Pelanggan yang Menyewa Kendaraan ===");
+        this.daftarPelanggan.forEach((p, i) => {
+          console.log(`${i + 1}. ${p.getInfoPelanggan()}`);
+        });
+      }
+    }
+
+    // Contoh penggunaan
+    let sistem = new SistemTransportasi();
+
+    let mobil1 = new Mobil("Toyota", "Avanza", 4);
+    let motor1 = new Motor("Honda", "CBR600RR", "Sport");
+
+    let pelanggan1 = new Pelanggan("Eko", "082246105463");
+    let pelanggan2 = new Pelanggan("Budi", "08987654321");
+
+    pelanggan1.sewaKendaraan(mobil1);
+    pelanggan2.sewaKendaraan(motor1);
+
+    sistem.tambahPelanggan(pelanggan1);
+    sistem.tambahPelanggan(pelanggan2);
+
+    sistem.tampilkanPelanggan();
+  </script>
+</body>
+</html>
