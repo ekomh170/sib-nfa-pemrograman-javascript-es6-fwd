@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 5 JS - Manajemen Produk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f6f9;
+      color: #333;
+    }
+    .identitas {
+      background: #fff;
+      border: 2px solid #0077b6;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .identitas h3 {
+      margin-top: 0;
+      color: #0077b6;
+    }
+    .identitas p {
+      margin: 5px 0;
+    }
+    h2 {
+      color: #023e8a;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    #output {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 15px;
+      white-space: pre-wrap;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Identitas mahasiswa, hanya dokumentasi -->
+  <div class="identitas">
+    <h3>Identitas Mahasiswa</h3>
+    <p><b>NIM:</b> 0110223079</p>
+    <p><b>Nama:</b> Eko Muchamad Haryono</p>
+    <p><b>Aktivitas:</b> SIB Fullstack Web Developer (NFA)</p>
+    <p><b>Topik:</b> Pemrograman JavaScript ES6</p>
+    <p><b>Group:</b> 2</p>
+    <p><b>Ruangan:</b> Zoom Mentoring Kelompok 02 Fullstack Web Developer - Gedung NF Academy Training Center</p>
+    <p><b>Prodi & Peminatan:</b> Teknik Informatika - Software Engineering</p>
+    <p><b>Semester:</b> 5</p>
+  </div>
+
+  <!-- Judul aplikasi dan fitur utama -->
+  <h2>Manajemen Produk Toko Online</h2>
+
+  <!-- Tombol aksi produk dan output -->
+  <button id="btnTampil">Tampilkan Produk</button>
+  <button id="btnTambah">Tambah Produk</button>
+  <button id="btnHapus">Hapus Produk ID 2</button>
+
+  <pre id="output"></pre>
+
+  <script>
+  // Data produk (array of object)
+    let produkList = [
+      { id: 1, nama: "Laptop", harga: 12000000 },
+      { id: 2, nama: "Smartphone", harga: 5000000 },
+      { id: 3, nama: "Tablet", harga: 7000000 },
+      { id: 4, nama: "Headphone", harga: 2000000 },
+      { id: 5, nama: "Smartwatch", harga: 2500000 }
+    ];
+
+  // Handler produk: tampil, tambah, hapus
+    const eventHandler = {
+  // Tampilkan produk (destructuring)
+      tampilkanProduk: function () {
+        let teks = "=== Daftar Produk ===\n";
+        // Destructuring pada parameter for...of
+        for (const { id, nama, harga } of produkList) {
+          teks += `ID: ${id}, Nama: ${nama}, Harga: Rp${harga}\n`;
+        }
+        document.getElementById("output").textContent = teks;
+      },
+
+  // Tambah produk (rest & spread)
+      tambahProduk: function (...produkBaru) {
+        produkList = [...produkList, ...produkBaru]; // spread
+        alert("Produk baru berhasil ditambahkan!");
+        this.tampilkanProduk();
+      },
+
+  // Hapus produk (filter)
+      hapusProduk: function (id) {
+        produkList = produkList.filter(p => p.id !== id);
+        alert(`Produk dengan ID ${id} berhasil dihapus!`);
+        this.tampilkanProduk();
+      }
+    };
+
+  // Event listener tombol (arrow function)
+    document.getElementById("btnTampil").addEventListener("click", () => {
+      eventHandler.tampilkanProduk();
+    });
+
+  // Tambah produk baru (Kamera)
+    document.getElementById("btnTambah").addEventListener("click", () => {
+      eventHandler.tambahProduk({ id: 6, nama: "Kamera", harga: 8000000 });
+    });
+
+  // Hapus produk id=2
+    document.getElementById("btnHapus").addEventListener("click", () => {
+      eventHandler.hapusProduk(2);
+    });
+
+  // Fitur ES6: destructuring, spread, rest, event listener, arrow function, OOP
+  </script>
+</body>
+</html>
