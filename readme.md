@@ -53,5 +53,18 @@ Repository ini berisi kumpulan tugas-tugas yang dikerjakan selama mengikuti prog
 - **Teknologi**: HTML5, JavaScript ES6
 - **Deskripsi**: Membuat Sistem Manajemen Transportasi menggunakan konsep Object-Oriented Programming (OOP) dalam JavaScript. Sistem mencakup berbagai jenis kendaraan dengan perilaku dan karakteristik berbeda. Perusahaan mencatat data pelanggan yang menyewa kendaraan (nama, nomor telepon, kendaraan yang disewa). Buat class Pelanggan dengan properti nama, nomorTelepon, dan kendaraanDisewa. Tambahkan metode untuk mencatat transaksi penyewaan kendaraan dan sistem yang menampilkan daftar pelanggan yang sedang menyewa. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
 
+### 🎯 Tugas 5: Pemrograman JavaScript ES6 - Manajemen Produk Toko Online
+- **Branch**: `tugas5-javascript-eko`
+- **GitHub Link**: [https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas5-javascript-eko](https://github.com/ekomh170/sib-nfa-pemrograman-javascript-es6-fwd/tree/tugas5-javascript-eko)
+- **Status**: ✅ SUDAH SUBMIT
+- **Deadline**: 25 September 2025, 23:59
+- **Teknologi**: HTML5, JavaScript ES6
+- **Deskripsi**: Sebuah toko online ingin mengembangkan fitur manajemen produk berbasis JavaScript. Fitur ini mencakup:
+	- List data produk awal minimal 5
+	- Menambahkan produk baru
+	- Menghapus produk
+	- Menampilkan semua produk
+	Aplikasi ini wajib menggunakan Event Listener, Destructuring, Spread Operator, dan Rest Parameter untuk efisiensi dan fleksibilitas kode. Kode ditulis dalam 1 file HTML, setiap fungsi diberi komentar penjelasan, dan file diupload ke Github. Link disubmit di LMS dan dapat diakses mentor. Dilarang plagiat.
+
 ---
 *Repository dibuat untuk program SIB Fullstack Web Developer (NFA) - Batch 2025*
