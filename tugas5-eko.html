@@ -124,9 +124,13 @@
       eventHandler.tampilkanProduk();
     });
 
-  // Tambah produk baru (Kamera)
+    // Tambah produk baru dengan id otomatis berurutan
     document.getElementById("btnTambah").addEventListener("click", () => {
-      eventHandler.tambahProduk({ id: 6, nama: "Kamera", harga: 8000000 });
+      // Cari id terbesar saat ini
+      const maxId = produkList.length > 0 ? Math.max(...produkList.map(p => p.id)) : 0;
+      // Contoh produk baru, bisa diganti sesuai kebutuhan
+      const produkBaru = { id: maxId + 1, nama: `Produk${maxId + 1}`, harga: 1000000 * (maxId + 1) };
+      eventHandler.tambahProduk(produkBaru);
     });
 
   // Hapus produk id=2
