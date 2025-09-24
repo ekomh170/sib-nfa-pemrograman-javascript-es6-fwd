@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pertemuan 6 - Data Controller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 0;
+        background: #f8fafc;
+        color: #111;
+      }
+      .container {
+        max-width: 900px;
+        margin: 32px auto 32px auto;
+        padding: 24px 20px 32px 20px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px 0 #0002;
+      }
+      h1 {
+        margin-bottom: 8px;
+        font-size: 2rem;
+        color: #2563eb;
+        letter-spacing: -1px;
+      }
+      .card {
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 20px 18px 18px 18px;
+        margin-bottom: 18px;
+        background: #f9fafb;
+        box-shadow: 0 2px 8px 0 #0001;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 4px #0001;
+      }
+      th, td {
+        border-bottom: 1px solid #eee;
+        padding: 10px 12px;
+        text-align: left;
+        font-size: 15px;
+      }
+      th {
+        background: #e0e7ef;
+        color: #1e293b;
+        font-weight: 600;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        margin-bottom: 18px;
+      }
+      input, button {
+        padding: 10px 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 15px;
+        background: #fff;
+        transition: border 0.2s;
+      }
+      input:focus {
+        outline: none;
+        border-color: #2563eb;
+      }
+      button {
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #1d4ed8;
+      }
+      form .row {
+        display: grid;
+        gap: 10px;
+      }
+      .muted {
+        color: #6b7280;
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+      /* Identitas Mahasiswa Styling */
+      .identitas {
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        background: #f1f5f9;
+        padding: 20px 28px 16px 28px;
+        margin-bottom: 32px;
+        max-width: 520px;
+        box-shadow: 0 2px 8px 0 #0001;
+      }
+      .identitas h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #2563eb;
+        font-size: 1.18em;
+        letter-spacing: 0.5px;
+      }
+      .identitas p {
+        margin: 4px 0;
+        font-size: 15px;
+      }
+      .identitas b {
+        color: #0f172a;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 10px 2vw 18px 2vw;
+        }
+        .identitas {
+          padding: 12px 8px 10px 8px;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- Identitas mahasiswa, hanya dokumentasi -->
+      <div class="identitas">
+        <h3>Identitas Mahasiswa</h3>
+        <p><b>NIM:</b> 0110223079</p>
+        <p><b>Nama:</b> Eko Muchamad Haryono</p>
+        <p><b>Aktivitas:</b> SIB Fullstack Web Developer (NFA)</p>
+        <p><b>Topik:</b> Pemrograman JavaScript ES6</p>
+        <p><b>Group:</b> 2</p>
+        <p><b>Ruangan:</b> Zoom Mentoring Kelompok 02 Fullstack Web Developer - Gedung NF Academy Training Center</p>
+        <p><b>Prodi & Peminatan:</b> Teknik Informatika - Software Engineering</p>
+        <p><b>Semester:</b> 5</p>
+      </div>
+
+      <h1>Manajemen Data (Array of Object)</h1>
+      <p class="muted">Fitur: Lihat, Tambah (push ≥ 2 data), Hapus • Tampil pakai <code>map()</code></p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Tambah Data</h3>
+        <form id="form-add">
+          <div class="row">
+            <input name="nama" placeholder="Nama" required />
+            <input name="umur" type="number" min="1" placeholder="Umur" required />
+            <input name="alamat" placeholder="Alamat" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <button type="submit">Tambah</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Hapus Data (by Email)</h3>
+        <form id="form-del">
+          <div class="row">
+            <input name="emailDel" type="email" placeholder="Email yang akan dihapus" required />
+            <button type="submit">Hapus</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Daftar Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Alamat</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

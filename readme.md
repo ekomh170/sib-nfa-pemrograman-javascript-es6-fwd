@@ -11,16 +11,29 @@
 - **Semester**: 5
 
 
-### 🎯 Tugas 5: Pemrograman JavaScript ES6 - Manajemen Produk Toko Online (Event Listener, Destructuring, Spread, Rest)
+### 🎯 Tugas 6: Pemrograman JavaScript ES6
 
 **Identitas Tugas:**
 - **Nama**: Eko Muchamad Haryono
 - **NIM**: 0110223079
 - **Topik**: Pemrograman JavaScript ES6
 - **Group**: 2
-- **Deadline**: Kamis, 25 September 2025, 23:59
+- **Deadline**: Jumat, 26 September 2025, 23:59
 
-**Deskripsi**: Membuat fitur manajemen produk untuk toko online menggunakan JavaScript. Fitur meliputi: list data produk awal minimal 5, menambah produk, menghapus produk, dan menampilkan semua produk. Aplikasi wajib menggunakan Event Listener, Destructuring, Spread Operator, dan Rest Parameter untuk efisiensi dan fleksibilitas kode. File diupload ke Github, link disubmit di LMS, dan dapat diakses mentor. Dilarang plagiat.
+
+**Deskripsi Tugas:**
+1. Terdapat file `data.js` yang berisi 10 data, dideklarasikan dengan Array of Object (masing-masing memiliki properti: nama, umur, alamat, email).
+2. Terdapat file `controller.js` yang berisi 3 perintah utama:
+  - Melihat data (lihat)
+  - Menambah data (tambah/push, minimal 2 data sekaligus pada proses push)
+  - Menghapus data (hapus)
+3. Data yang ditampilkan ke tampilan (DOM) menggunakan fungsi `map()`.
+4. File `app.js` sebagai contoh penggunaan controller dan proses render ke DOM.
+5. File `index.html` sebagai UI sederhana (form tambah, hapus, dan tabel data).
+
+**Catatan Penting:**
+- Proses penambahan data (push minimal 2 data) dilakukan di aplikasi utama, bukan di modul.
+- Penampilan data ke tabel menggunakan fungsi `map()` sesuai instruksi soal.
 
 ---
 *Repository dibuat untuk program SIB Fullstack Web Developer (NFA) - Batch 2025*
